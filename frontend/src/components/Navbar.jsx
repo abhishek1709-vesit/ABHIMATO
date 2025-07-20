@@ -75,7 +75,7 @@ export const Navbar = () => {
           <img src={assets.profile_icon} alt="Profile Icon" loading="lazy" onClick={() => setProfile(!profile)}/>
           {
             profile && 
-          <ul className="absolute right-2 top-10 z-10 w-30 bg-white p-1">
+          <ul className="absolute right-1 md:right-0 top-10 z-10 w-30 bg-white p-1">
            
             <li className="flex items-center pb-2"> <NavLink to={"/myorders"} className={"flex items-center "}><img src={assets.bag_icon} alt="Bag Icon" /><p className="bg-white">Orders</p></NavLink></li>
 
