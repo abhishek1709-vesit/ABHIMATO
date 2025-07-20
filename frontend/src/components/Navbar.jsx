@@ -44,14 +44,6 @@ export const Navbar = () => {
           > <NavLink to={"/menu"}>Menu</NavLink>
           </li>
           <li
-            onClick={() => setMenu("Mobile App")}
-            className={`${
-              menu === "Mobile App" ? "text-[#FF4C24] pb-2 border-b-2" : ""
-            } cursor-pointer`}
-          >
-            Mobile App
-          </li>
-          <li
             onClick={() => setMenu("Contact")}
             className={`${
               menu === "Contact" ? "text-[#FF4C24] pb-2 border-b-2" : ""
