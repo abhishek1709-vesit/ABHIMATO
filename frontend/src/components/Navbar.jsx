@@ -17,7 +17,7 @@ export const Navbar = () => {
   }
   return (
     <div>
-    <nav className="fixed z-50 opacity-90 bg-white w-full small-text-style flex justify-between items-center p-5 shadow-xl">
+    <nav className="fixed z-50 opacity-90 bg-white w-full small-text-style flex justify-around items-center p-5 shadow-xl">
       <div>
         <NavLink>
         <img src={assets.logo} alt="logo" className="w-28 md:w-full" />
@@ -65,14 +65,12 @@ export const Navbar = () => {
       <div className="flex items-center gap-5 mr-4">
         <div>
           <NavLink to={"/cart"}>
-          {
-            getTotalCartAmount() === 0 ? "" :  <img
+            <img
             src={assets.basket_icon}
             alt="Basket Icon"
             loading="lazy"
-            className="w-6 h-5 cursor-pointer"
+            className={`w-6 h-5 cursor-pointer ${getTotalCartAmount() === 0 ? "hidden" : "inline-block"}`}
           />
-          }
          
           </NavLink>
         </div>
@@ -85,13 +83,12 @@ export const Navbar = () => {
           <img src={assets.profile_icon} alt="Profile Icon" loading="lazy" onClick={() => setProfile(!profile)}/>
           {
             profile && 
-          <ul className="absolute right-2 top-10 z-10 bg-white">
-            <NavLink to={"/myorders"}>
-            <li className="flex items-center pb-1"><img src={assets.bag_icon} alt="Bag Icon" /><p className="bg-white">Orders</p></li>
+          <ul className="absolute right-2 top-10 z-10 w-30 bg-white p-1">
+           
+            <li className="flex items-center pb-2"> <NavLink to={"/myorders"} className={"flex items-center "}><img src={assets.bag_icon} alt="Bag Icon" /><p className="bg-white">Orders</p></NavLink></li>
 
-            </NavLink>
             <hr />
-            <li onClick={logOut} className="flex items-center pb-1"><img src={assets.logout_icon} alt="Log Out icon" loading="lazy" /><p className="bg-white">Log Out</p></li>
+            <li onClick={logOut} className="flex items-center pt-2"><img src={assets.logout_icon} alt="Log Out icon" loading="lazy" /><p className="bg-white">Log Out</p></li>
           </ul>
           }
         </div>
