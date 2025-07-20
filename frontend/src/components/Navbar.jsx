@@ -21,7 +21,7 @@ export const Navbar = () => {
       <div>
         <NavLink>
 
-        <img src={assets.logo2} alt="logo" className="w-28 md:w-full" />
+        <img src={assets.logo2} alt="logo" className="w-25 h-10" />
         </NavLink>
       </div>
       <div className="inline-block md:hidden">
