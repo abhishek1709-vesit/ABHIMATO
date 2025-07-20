@@ -22,15 +22,15 @@ export const MyOrders = () => {
     }, [token])
 
     return (
-        <div className="pt-20">
+        <div className="pt-25 mx-2">
             <h2 className="text-2xl font-bold mt-5">Your Order</h2>
             <div>
-                <ul className="border-1 rounded-xl p-5 mt-10">
+                <ul className="p-5 md:mt-10">
                     {
                         data.map((curOrder, index) => {
                             const {items, amount, address, date, status} = curOrder
                             return(
-                                <li key={index} className="grid grid-cols-3 md:grid-cols-6 items-center gap-x-3 gap-y-5 pb-2 border-b-1 p-1">
+                                <li key={index} className="grid grid-cols-3 md:grid-cols-6 items-center gap-x-3 gap-y-5 pb-2 border-2 my-5 p-1 rounded-xl">
                                     <img src={assets.parcel_icon} alt="" />
                                     <p>
                                         {
