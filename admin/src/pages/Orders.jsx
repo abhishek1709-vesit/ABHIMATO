@@ -26,13 +26,13 @@ export const Orders = () => {
     fetchAllOrders()
   }, [])
   return (
-    <div>
+    <div className="w-full">
       {
         orders.map((curOrder, index) => {
           return (
-            <div key={index} className="grid grid-cols-5 mt-5 border-1 mx-5 gap-x-5 items-center p-2">
+            <div key={index} className="grid grid-cols-6 mt-5 border-1 mx-5 items-center p-2">
               <p>{curOrder.address.name}</p>
-              <p className="w-60 ">{curOrder.items.map((item, index) => {
+              <p className="w-40">{curOrder.items.map((item, index) => {
                 if(index === curOrder.items.length - 1){
                   return item.name + " X " + item.quantity
                 }else{
@@ -40,7 +40,8 @@ export const Orders = () => {
                 }
               })}</p>
               <p className="w-fit">₹ {curOrder.amount}</p>
-              <p className=" w-60">Address :- <span>{curOrder.address.building_name}, {curOrder.address.street}, {curOrder.address.area}, {curOrder.address.city}, {curOrder.address.state}, {curOrder.address.pincode}</span></p>
+              <p className=" w-40">Address :- <span>{curOrder.address.building_name}, {curOrder.address.street}, {curOrder.address.area}, {curOrder.address.city}, {curOrder.address.state}, {curOrder.address.pincode}</span></p>
+              <p>{curOrder.address.phone_number}</p>
               <select className="border-2 w-40" onChange={(event) => statusHandler(event, curOrder._id)} value={curOrder.status}> 
                 <option value="Food Proccessing">Food Processing</option>
                 <option value="Out For Delivery">Out For Delivery</option>
