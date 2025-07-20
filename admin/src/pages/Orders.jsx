@@ -26,11 +26,11 @@ export const Orders = () => {
     fetchAllOrders()
   }, [])
   return (
-    <div className="w-full">
+    <div className="w-screen">
       {
         orders.map((curOrder, index) => {
           return (
-            <div key={index} className="grid grid-cols-6 mt-5 border-1 mx-5 items-center p-2">
+            <div key={index} className="grid grid-rows-3 md:grid-rows-1 md:grid-cols-6 mt-5 border-1 mx-5 items-center p-2">
               <p>{curOrder.address.name}</p>
               <p className="w-40">{curOrder.items.map((item, index) => {
                 if(index === curOrder.items.length - 1){
