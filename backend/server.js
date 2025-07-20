@@ -10,7 +10,7 @@ import orderRouter from "./routes/orderRoute.js"
 
 //app config
 const app = express()
-const PORT_NO = 4000
+const PORT_NO = process.env.PORT_NO
 
 //middle ware
 app.use(express.json())
