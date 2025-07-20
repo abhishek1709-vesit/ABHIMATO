@@ -6,7 +6,7 @@ export const Cart = () => {
   const {cartItems, food_list, removeFromCart, getTotalCartAmount, url} = useContext(StoreContext)
 
   return (
-      <div className="p-2 pt-30 small-text-style">
+      <div className="p-2 pt-25 mx-2 small-text-style">
         <div className="grid grid-cols-6 gap-5 text-center">
           <p>Item</p>
           <p>Name</p>

@@ -60,7 +60,7 @@ export const PlaceOrder = () => {
     }, [token])
 
   return (
-    <div className="flex gap-20 justify-around pt-20">
+    <div className="flex flex-col items-center md:flex-row md:gap-20 md:justify-around pt-20">
     
     <form onSubmit={placeOrder} className="small-text-style flex gap-5 flex-col items-center my-12 p-3">
         <p className="text-3xl text-style">Delivery Information</p>
@@ -74,7 +74,7 @@ export const PlaceOrder = () => {
             <input required name="email" value={data.email} onChange={onChangeHandler} type="email" placeholder="Email" id="email" className="border-[1px] border-gray-500 pl-2" />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-y-10 gap-x-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-5 md:gap-y-10 gap-x-5">
           <div className="flex flex-col">
             <label htmlFor="building">Building Name</label>
             <input required name="building_name" value={data.building_name} onChange={onChangeHandler} type="text" className="border-[1px] border-gray-500 w-50 pl-2" placeholder="Building name" id="building"/>
@@ -104,10 +104,10 @@ export const PlaceOrder = () => {
             <input required name="phone_number" value={data.phone_number} onChange={onChangeHandler} type="number" className="border-[1px] border-gray-500 w-50 pl-2" id="phone" placeholder="Phone Number" />
           </div>
       </div>
-      <button className="bg-[tomato] text-white font-semibold rounded-sm w-[15vw] py-1.5 cursor-pointer" type="submit" >Proceed to payment</button>
+      <button className="bg-[tomato] text-white font-semibold rounded-sm min-w-[15vw] px-2 py-1.5 cursor-pointer" type="submit" >Proceed to payment</button>
     </form>
-    <div className="flex flex-col justify-around mt-5">
-          <div className="w-[30vw] small-text-style">
+    <div className="flex flex-col">
+          <div className="w-[60vw] md:w-[30vw] small-text-style">
             <p className="text-style font-bold text-2xl">Cart Totals</p>
             <div className="mt-1.5 flex flex-col gap-4 border-[1px] rounded-xl px-5 py-2">
               <div className="flex justify-between border-b-[1px] ">
