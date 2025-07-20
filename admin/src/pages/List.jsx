@@ -3,7 +3,7 @@ import axios from "axios"
 
 export const List = () => {
   const [list, setList] = useState([])
-  const url = `http://localhost:${import.meta.env.VITE_PORT}`
+  const url = `https://food-del-backend-jumm.onrender.com`
   console.log(url)
   const fetchList = async () => {
     const response = await axios.get(`${url}/api/food/list`)

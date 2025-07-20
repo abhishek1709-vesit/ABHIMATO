@@ -4,7 +4,7 @@ import axios from "axios"
 
 export const Orders = () => {
   const [orders, setOrders] = useState([])
-  const url = `http://localhost:${import.meta.env.VITE_PORT}`
+  const url = `https://food-del-backend-jumm.onrender.com`
 
   const fetchAllOrders = async () => {
     const response = await axios.get(url + "/api/order/list")

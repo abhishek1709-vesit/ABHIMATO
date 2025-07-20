@@ -6,7 +6,7 @@ export const StoreContext = createContext(null)
 const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({})
 
-    const url = `http://localhost:${import.meta.env.VITE_PORT}`
+    const url = `https://food-del-backend-jumm.onrender.com`
 
     const [token, setToken] = useState("")
 

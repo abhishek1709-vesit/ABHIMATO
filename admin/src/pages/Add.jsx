@@ -3,7 +3,7 @@ import { assets } from "../assets/admin_assets/assets"
 import axios from "axios"
 
 export const Add = () => {
-  const url = `http://localhost:${import.meta.env.VITE_PORT}`
+  const url = `https://food-del-backend-jumm.onrender.com`
   const [image, setImage] = useState(false)
   const [data, setData] = useState({
     name : "",

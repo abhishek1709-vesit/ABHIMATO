@@ -20,7 +20,8 @@ export const Navbar = () => {
     <nav className="fixed z-50 opacity-90 bg-white w-full small-text-style flex justify-around items-center p-5 shadow-xl">
       <div>
         <NavLink>
-        <img src={assets.logo2} alt="logo" className="w-20 h-10" />
+
+        <img src={assets.logo2} alt="logo" className="w-28 md:w-full" />
         </NavLink>
       </div>
       <div className="inline-block md:hidden">
