@@ -72,7 +72,7 @@ export const Navbar = () => {
           Sign In
         </button> : 
         <div className="relative">
-          <img src={assets.profile_icon} alt="Profile Icon" loading="lazy" onClick={() => setProfile(!profile)}/>
+          <img src={assets.profile_icon} alt="Profile Icon" loading="lazy" onClick={() => setProfile(!profile)} className="cursor-pointer"/>
           {
             profile && 
           <ul className="absolute right-1 md:right-0 top-10 z-10 w-30 bg-white p-1">
