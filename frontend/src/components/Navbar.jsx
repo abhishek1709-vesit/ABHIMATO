@@ -34,7 +34,7 @@ export const Navbar = () => {
               menu === "Home" ? "text-[#FF4C24] pb-2 border-b-2" : ""
             } cursor-pointer`}
           >
-            Home
+            <NavLink to={"/"}>Home</NavLink>
           </li>
           <li
             onClick={() => setMenu("Menu")}
