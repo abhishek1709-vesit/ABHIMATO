@@ -4,7 +4,8 @@ import axios from "axios"
 
 export const Orders = () => {
   const [orders, setOrders] = useState([])
-  const url = "http://localhost:4000"
+  const url = `http://localhost:${import.meta.env.VITE_PORT}`
+
   const fetchAllOrders = async () => {
     const response = await axios.get(url + "/api/order/list")
     if(response.data.success){

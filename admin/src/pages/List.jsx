@@ -3,7 +3,8 @@ import axios from "axios"
 
 export const List = () => {
   const [list, setList] = useState([])
-  const url = "http://localhost:4000"
+  const url = `http://localhost:${import.meta.env.VITE_PORT}`
+  console.log(url)
   const fetchList = async () => {
     const response = await axios.get(`${url}/api/food/list`)
     if(response.data.success){
