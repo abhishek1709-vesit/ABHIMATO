@@ -11,7 +11,6 @@ export const FoodItem = ({ id, name, description, price, image }) => {
         <img
           src={url + "/images/" + image}
           alt={name}
-          loading="lazy"
           className="rounded-t-xl w-full"
         />
         {

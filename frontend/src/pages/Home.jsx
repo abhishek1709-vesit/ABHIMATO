@@ -17,7 +17,7 @@ export const Home = () => {
 
     <main className="pt-20 md:pt-25 ">
       <div className="relative ">
-        <img src={assets.header_img} alt="Hero Image" loading="lazy" className="w-full h-[30vh] md:h-full opacity-90"/>
+        <img src={assets.header_img} alt="Hero Image" className="w-full h-[30vh] md:h-full opacity-90"/>
         <div className="absolute bottom-12 left-4 sm:left-8 lg:left-12 max-w-xs sm:max-w-md lg:max-w-lg text-white">
           <p className="text-style text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4">
             Order Your Favourite food here
